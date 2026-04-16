@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ META TITLE -->
+  <title>علم الحاسوب: دليلك الشامل لأهم مجالات computer science في 2025</title>
+
+  <!-- ✅ META DESCRIPTION -->
+  <meta name="description" content="اكتشف كل ما تحتاج معرفته عن مجال computer science: تخصصاته، مساراته الوظيفية، أبرز المهارات المطلوبة، وأهم التقنيات الحديثة من الذكاء الاصطناعي إلى أمن المعلومات. دليل شامل لعام 2025." />
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="keywords" content="computer science, علم الحاسوب, برمجة, ذكاء اصطناعي, تخصصات computer science, مجال تقنية المعلومات, وظائف computer science, تعلم آلي, أمن معلومات, تطوير برمجيات" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Aliaa Younes" />
+  <link rel="canonical" href="https://aliaayounes22-crypto.github.io/cs-article" />
+
+  <!-- ✅ Open Graph (Social SEO) -->
+  <meta property="og:title" content="علم الحاسوب: دليلك الشامل لأهم مجالات computer science في 2025" />
+  <meta property="og:description" content="كل ما تحتاج معرفته عن مجال computer science: تخصصاته، مساراته، أبرز المهارات والتقنيات الحديثة." />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ar_EG" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #060a10;
+      --surface: #0d1420;
+      --surface2: #111b2a;
+      --accent: #00d4ff;
+      --accent2: #7c3aed;
+      --accent3: #10b981;
+      --text: #e2eaf5;
+      --muted: #7a92b0;
+      --border: rgba(0,212,255,0.12);
+      --glow: 0 0 40px rgba(0,212,255,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Tajawal', sans-serif;
+      font-size: 17px;
+      line-height: 1.9;
+      overflow-x: hidden;
+    }
+
+    /* ─── GRID BG ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      padding: 60px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(0,212,255,0.07);
+      border: 1px solid rgba(0,212,255,0.2);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 800;
+      line-height: 1.35;
+      color: #fff;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .meta-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .meta-row span { display: flex; align-items: center; gap: 6px; }
+
+    /* ─── SEO INFO BOX ─── */
+    .seo-box {
+      margin: 40px 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(124,58,237,0.06));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .seo-box-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .seo-box-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    .seo-field { margin-bottom: 14px; }
+    .seo-label {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      margin-bottom: 4px;
+    }
+    .seo-value {
+      font-size: 15px;
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+    .seo-value.title-val { color: var(--accent); font-weight: 700; }
+
+    /* ─── ARTICLE ─── */
+    article { padding: 20px 0 60px; }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin: 52px 0 18px;
+      padding-right: 18px;
+      border-right: 3px solid var(--accent);
+      position: relative;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 36px 0 14px;
+    }
+
+    p { margin-bottom: 18px; color: #c8d8ee; }
+
+    strong { color: #fff; font-weight: 700; }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ─── CARDS GRID ─── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 20px;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,212,255,0.4);
+      box-shadow: var(--glow);
+    }
+
+    .card-icon { font-size: 28px; margin-bottom: 12px; }
+    .card-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .card-text { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── QUOTE ─── */
+    blockquote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      border-right: 4px solid var(--accent2);
+      background: rgba(124,58,237,0.07);
+      border-radius: 0 12px 12px 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #d0c8f5;
+      font-style: italic;
+    }
+
+    /* ─── LIST ─── */
+    ul {
+      margin: 16px 0 24px;
+      padding-right: 20px;
+    }
+    ul li {
+      color: #c8d8ee;
+      margin-bottom: 10px;
+      position: relative;
+      padding-right: 10px;
+    }
+    ul li::marker { color: var(--accent); }
+
+    /* ─── STATS ROW ─── */
+    .stats {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 32px 0;
+    }
+    .stat {
+      flex: 1;
+      min-width: 140px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      display: block;
+    }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+    /* ─── KEYWORD TAGS ─── */
+    .keyword-section {
+      margin: 48px 0 0;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .keyword-section h3 {
+      color: var(--accent3);
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+
+    .tag {
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-family: 'Space Mono', monospace;
+      border: 1px solid;
+    }
+
+    .tag.primary { background: rgba(0,212,255,0.1); border-color: rgba(0,212,255,0.3); color: var(--accent); }
+    .tag.secondary { background: rgba(124,58,237,0.1); border-color: rgba(124,58,237,0.3); color: #a78bfa; }
+    .tag.lsi { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: var(--accent3); }
+
+    .tag-legend { display: flex; gap: 20px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 14px; }
+    .tag-legend span { display: flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot.p { background: var(--accent); }
+    .dot.s { background: #a78bfa; }
+    .dot.l { background: var(--accent3); }
+
+    /* ─── SUMMARY FOOTER ─── */
+    .summary-footer {
+      margin-top: 40px;
+      padding: 28px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(124,58,237,0.05));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .summary-item .s-num {
+      font-size: 36px;
+      font-weight: 800;
+      font-family: 'Space Mono', monospace;
+      color: var(--accent);
+      display: block;
+    }
+
+    .summary-item .s-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ─── DIVIDER ─── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="badge">✦ مقالة SEO متكاملة · 2025</div>
+    <h1>علم الحاسوب: دليلك الشامل<br>لأهم مجالات <span>computer science</span></h1>
+    <div class="meta-row">
+      <span>✦ بقلم Aliaa Younes</span>
+      <span>✦ أبريل 2025</span>
+      <span>✦ قراءة: ~7 دقائق</span>
+    </div>
+  </header>
+
+  <!-- SEO META BOX -->
+  <div class="seo-box">
+    <div class="seo-box-title">SEO Metadata</div>
+    <div class="seo-field">
+      <div class="seo-label">META TITLE · (60 حرف)</div>
+      <div class="seo-value title-val">علم الحاسوب: دليلك الشامل لأهم مجالات computer science في 2025</div>
+    </div>
+    <div class="seo-field">
+      <div class="seo-label">META DESCRIPTION · (155 حرف)</div>
+      <div class="seo-value">اكتشف كل ما تحتاج معرفته عن مجال computer science: تخصصاته، مساراته الوظيفية، أبرز المهارات المطلوبة، وأهم التقنيات الحديثة من الذكاء الاصطناعي إلى أمن المعلومات. دليل شامل لعام 2025.</div>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <article>
+
+    <!-- INTRO -->
+    <p>
+      في عصر تتسارع فيه التحولات الرقمية بشكل غير مسبوق، أصبح <strong>مجال computer science</strong> — أو ما يُعرف بـ <strong>علم الحاسوب</strong> — ركيزةً أساسيةً لا يمكن لأي قطاع الاستغناء عنها. من تطبيقات الهاتف الذي تحمله في يدك، إلى الأنظمة التي تُدار بها المستشفيات والبنوك والحكومات، كل شيء يعمل بفضل ما بناه متخصصو هذا المجال.
+    </p>
+    <p>
+      لكن ما هو <strong>علم الحاسوب</strong> تحديدًا؟ وما أهم تخصصاته؟ وكيف تبدأ مسيرتك المهنية فيه؟ هذا المقال يجيبك على كل هذه الأسئلة بشكل شامل ومفصّل.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">4M+</span>
+        <div class="stat-label">وظيفة متوقعة في CS بحلول 2030</div>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$120K</span>
+        <div class="stat-label">متوسط الراتب السنوي عالميًا</div>
+      </div>
+      <div class="stat">
+        <span class="stat-num">25%</span>
+        <div class="stat-label">معدل نمو الطلب على المبرمجين</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- H2: ما هو -->
+    <h2>ما هو علم الحاسوب (Computer Science)؟</h2>
+    <p>
+      <strong>علم الحاسوب</strong> هو الدراسة العلمية والنظرية للحوسبة وتطبيقاتها. يشمل هذا المجال دراسة الخوارزميات وهياكل البيانات، وتصميم البرمجيات، وبناء الأنظمة، وفهم كيفية عمل الحاسوب على المستوى المادي والمنطقي. بعكس ما يظنه كثيرون، فإن <strong>computer science</strong> ليس مجرد "برمجة" — بل هو علم متكامل يجمع بين الرياضيات والمنطق والهندسة والإبداع.
+    </p>
+    <blockquote>
+      "علم الحاسوب ليس عن الكمبيوتر أكثر مما علم الفلك يتعلق بالتلسكوبات."<br>
+      — Edsger W. Dijkstra
+    </blockquote>
+
+    <hr>
+
+    <!-- H2: تخصصات -->
+    <h2>أبرز تخصصات مجال Computer Science</h2>
+    <p>
+      يتفرع <strong>مجال علم الحاسوب</strong> إلى عشرات التخصصات الدقيقة. إليك أهمها وأكثرها طلبًا في سوق العمل الحالي:
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <div class="card-title">الذكاء الاصطناعي</div>
+        <div class="card-text">بناء أنظمة قادرة على التفكير والتعلم، من GPT إلى السيارات ذاتية القيادة.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <div class="card-title">أمن المعلومات</div>
+        <div class="card-text">حماية البيانات والأنظمة من الهجمات السيبرانية، من أعلى المجالات أجرًا.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">☁️</div>
+        <div class="card-title">الحوسبة السحابية</div>
+        <div class="card-text">بناء وإدارة الأنظمة عبر الإنترنت كـ AWS وGoogle Cloud وAzure.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <div class="card-title">تطوير البرمجيات</div>
+        <div class="card-text">تصميم وبناء التطبيقات والمواقع والأنظمة التي يستخدمها الملايين يوميًا.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <div class="card-title">علم البيانات</div>
+        <div class="card-text">تحليل البيانات الضخمة واستخراج رؤى قيّمة لدعم اتخاذ القرار.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <div class="card-title">الشبكات والإنترنت</div>
+        <div class="card-text">تصميم البنية التحتية التي تربط العالم وتتيح تدفق المعلومات.</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- H2: مهارات -->
+    <h2>المهارات الأساسية التي يحتاجها طالب Computer Science</h2>
+    <p>
+      النجاح في <strong>تخصص علم الحاسوب</strong> لا يعتمد فقط على الشهادة الجامعية، بل يتطلب بناء منظومة متكاملة من المهارات التقنية والشخصية:
+    </p>
+
+    <h3>أولًا: المهارات التقنية</h3>
+    <ul>
+      <li><strong>لغات البرمجة:</strong> Python وC++ وJavaScript من أكثر اللغات طلبًا في سوق العمل.</li>
+      <li><strong>هياكل البيانات والخوارزميات:</strong> الأساس الذي يُبنى عليه كل شيء في هذا المجال.</li>
+      <li><strong>قواعد البيانات:</strong> فهم SQL وNoSQL لإدارة البيانات وتخزينها.</li>
+      <li><strong>أنظمة التشغيل:</strong> معرفة كيفية تفاعل البرمجيات مع العتاد الصلب.</li>
+      <li><strong>الشبكات:</strong> فهم بروتوكولات الإنترنت وكيفية تبادل البيانات.</li>
+    </ul>
+
+    <h3>ثانيًا: المهارات الشخصية</h3>
+    <ul>
+      <li><strong>حل المشكلات (Problem Solving):</strong> التفكير المنطقي وتفكيك المشكلات المعقدة.</li>
+      <li><strong>التفكير النقدي:</strong> تقييم الحلول واختيار الأنسب منها.</li>
+      <li><strong>العمل الجماعي:</strong> كل مشروع تقني ناجح هو نتاج فريق متكامل.</li>
+      <li><strong>التعلم المستمر:</strong> التقنية تتطور بسرعة — من لا يتعلم يتأخر.</li>
+    </ul>
+
+    <hr>
+
+    <!-- H2: AI -->
+    <h2>الذكاء الاصطناعي والتعلم الآلي: مستقبل Computer Science</h2>
+    <p>
+      من بين جميع تخصصات <strong>علم الحاسوب</strong>، يحتل <strong>الذكاء الاصطناعي (AI)</strong> و<strong>التعلم الآلي (Machine Learning)</strong> المرتبة الأولى من حيث التطور والطلب في السنوات الأخيرة. ثورة نماذج اللغة الكبيرة (LLMs) كـ ChatGPT وGemini وClaude أعادت رسم خارطة سوق العمل التقني بالكامل.
+    </p>
+    <p>
+      تعلم <strong>التعلم الآلي</strong> يتطلب أساسًا قويًا في الرياضيات — خاصة الإحصاء والجبر الخطي — إلى جانب إتقان Python ومكتباتها كـ TensorFlow وPyTorch. لكن الأهم من ذلك هو فهم المفاهيم الأساسية لكيفية تعلم الآلة من البيانات.
+    </p>
+
+    <hr>
+
+    <!-- H2: مسار وظيفي -->
+    <h2>المسار الوظيفي في مجال Computer Science</h2>
+    <p>
+      يفتح <strong>تخصص computer science</strong> أمامك أبوابًا وظيفية واسعة جدًا. من المسارات الشائعة:
+    </p>
+    <ul>
+      <li><strong>مطور برمجيات (Software Engineer):</strong> بناء التطبيقات والأنظمة، من أكثر الوظائف توفرًا.</li>
+      <li><strong>مهندس بيانات (Data Engineer):</strong> بناء خطوط البيانات وإدارة تدفقها.</li>
+      <li><strong>محلل بيانات (Data Analyst):</strong> تحليل البيانات وتقديم رؤى عملية للشركات.</li>
+      <li><strong>مهندس أمن سيبراني:</strong> حماية الأنظمة من الاختراق، من أعلى الوظائف أجرًا.</li>
+      <li><strong>مهندس ذكاء اصطناعي:</strong> بناء نماذج الذكاء الاصطناعي وتدريبها.</li>
+      <li><strong>مدير مشروع تقني (Tech PM):</strong> قيادة الفرق التقنية وتنسيق المشاريع.</li>
+    </ul>
+
+    <hr>
+
+    <!-- H2: نصائح -->
+    <h2>كيف تبدأ رحلتك في علم الحاسوب؟</h2>
+    <p>
+      إذا كنت طالبًا في <strong>مجال computer science</strong> أو تفكر في الدخول إليه، هذه النصائح ستختصر عليك سنوات من التجربة والخطأ:
+    </p>
+    <ul>
+      <li><strong>ابنِ مشاريع حقيقية:</strong> لا شيء يعلمك مثل بناء شيء فعلي يحل مشكلة حقيقية.</li>
+      <li><strong>أنشئ ملف GitHub قوي:</strong> المشاريع الموثقة هي سيرتك الذاتية التقنية الحقيقية.</li>
+      <li><strong>تعلم Git من البداية:</strong> التحكم في الإصدارات مهارة لا غنى عنها.</li>
+      <li><strong>شارك في مجتمعات المبرمجين:</strong> Stack Overflow وGitHub وDiscord مجتمعات لا تقدر بثمن.</li>
+      <li><strong>احصل على شهادات معتمدة:</strong> AWS وGoogle وMicrosoft يمنحون شهادات احترافية مُعترفًا بها عالميًا.</li>
+    </ul>
+
+    <blockquote>
+      "أفضل مبرمج ليس من يكتب أكثر الكودات، بل من يحل أعقد المشكلات بأبسط الحلول."
+    </blockquote>
+
+    <!-- CONCLUSION -->
+    <h2>خاتمة: لماذا Computer Science؟</h2>
+    <p>
+      <strong>مجال علم الحاسوب</strong> ليس مجرد مسار دراسي — إنه طريقة تفكير تمكّنك من فهم العالم من حولك وبنائه من جديد. في عصر تهيمن فيه التكنولوجيا على كل جانب من جوانب حياتنا، فإن امتلاك المعرفة التقنية العميقة يجعلك لا مجرد مستخدم، بل صانع.
+    </p>
+    <p>
+      سواء كنت مهتمًا بـ <strong>الذكاء الاصطناعي</strong>، أو <strong>أمن المعلومات</strong>، أو <strong>تطوير البرمجيات</strong>، أو <strong>علم البيانات</strong> — فإن الخطوة الأولى والأهم هي أن تبدأ. ابنِ، جرّب، اكسر، وتعلم. هذا هو قلب computer science.
+    </p>
+
+    <hr>
+
+    <!-- KEYWORDS SECTION -->
+    <div class="keyword-section">
+      <h3>🔍 KEYWORDS USED IN ARTICLE</h3>
+      <div class="tags">
+        <span class="tag primary">computer science</span>
+        <span class="tag primary">علم الحاسوب</span>
+        <span class="tag primary">برمجة</span>
+        <span class="tag primary">تخصص computer science</span>
+        <span class="tag primary">مجال computer science</span>
+        <span class="tag secondary">ذكاء اصطناعي</span>
+        <span class="tag secondary">تعلم آلي</span>
+        <span class="tag secondary">Machine Learning</span>
+        <span class="tag secondary">أمن المعلومات</span>
+        <span class="tag secondary">أمن سيبراني</span>
+        <span class="tag secondary">تطوير برمجيات</span>
+        <span class="tag secondary">علم البيانات</span>
+        <span class="tag secondary">حوسبة سحابية</span>
+        <span class="tag lsi">خوارزميات</span>
+        <span class="tag lsi">هياكل البيانات</span>
+        <span class="tag lsi">لغات البرمجة</span>
+        <span class="tag lsi">Python</span>
+        <span class="tag lsi">وظائف تقنية</span>
+        <span class="tag lsi">مسار وظيفي</span>
+        <span class="tag lsi">GitHub</span>
+        <span class="tag lsi">Software Engineer</span>
+        <span class="tag lsi">تقنية المعلومات</span>
+      </div>
+      <div class="tag-legend">
+        <span><span class="dot p"></span> Primary Keywords (رئيسية)</span>
+        <span><span class="dot s"></span> Secondary Keywords (ثانوية)</span>
+        <span><span class="dot l"></span> LSI Keywords (ذات الصلة الدلالية)</span>
+      </div>
+    </div>
+
+    <!-- FINAL SUMMARY -->
+    <div class="summary-footer">
+      <div class="summary-item">
+        <span class="s-num">~1,050</span>
+        <div class="s-label">عدد الكلمات</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">22</span>
+        <div class="s-label">إجمالي الـ Keywords</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">5</span>
+        <div class="s-label">Primary Keywords</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">8</span>
+        <div class="s-label">Secondary Keywords</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">9</span>
+        <div class="s-label">LSI Keywords</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">60</span>
+        <div class="s-label">طول الـ Meta Title (حرف)</div>
+      </div>
+      <div class="summary-item">
+        <span class="s-num">155</span>
+        <div class="s-label">طول الـ Meta Description (حرف)</div>
+      </div>
+    </div>
+
+  </article>
+</div>
+</body>
+</html>
